@@ -1,0 +1,73 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/media
+public_folder: /media
+
+collections:
+  - name: team
+    label: Team
+    label_singular: Team Member
+    extension: json
+    folder: src/data/team
+    create: true
+    delete: true
+    editor:
+      preview: false
+    identifier_field: name
+    fields:
+      - name: name
+        widget: string
+      - name: bio
+        widget: markdown
+      - name: slug
+        widget: string
+
+  - name: cars
+    label: Cars
+    label_singular: Car
+    extension: json
+    folder: src/data/cars
+    create: true
+    delete: true
+    editor:
+      preview: false
+    fields:
+      - name: title
+        widget: string
+      - name: year
+        widget: number
+      - name: color
+        widget: string
+
+  - name: pages
+    label: Pages
+    label_singular: Page
+    extension: json
+    folder: src/data/pages
+    identifier_field: page
+    create: true
+    delete: true
+    editor:
+      preview: false
+    fields:
+      - name: page
+        widget: text
+        label: page
+      - name: title
+        widget: string
+        label: Title
+      - name: heading
+        widget: string
+        label: Heading
+      - name: rows
+        widget: list
+        label: Rows
+        fields:
+          - name: text
+            widget: string
+            label: Text
+          - name: img
+            widget: image
+            label: Image

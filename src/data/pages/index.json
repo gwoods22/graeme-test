@@ -1,0 +1,23 @@
+{
+  "page": "home",
+  "title": "Hello Internet",
+  "heading": "These are the details",
+  "rows": [
+    {
+      "text": "This is the new first image",
+      "img": "/media/random3.jpg"
+    },
+    {
+      "text": "This is a random image.",
+      "img": "/media/random1.jpg"
+    },
+    {
+      "text": "This is another random image.",
+      "img": "/media/random2.jpg"
+    },
+    {
+      "text": "This is yet another random image",
+      "img": "/media/random4.jpg"
+    }
+  ]
+}
