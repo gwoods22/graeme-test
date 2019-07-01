@@ -7,6 +7,9 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		font-size: 16px;
 		padding: 2rem;
+		span.bold {
+			font-weight: 700;
+		}
 	}
 	* {
 		box-sizing: border-box;
