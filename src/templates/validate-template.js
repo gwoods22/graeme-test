@@ -43,7 +43,8 @@ const ValidateTemplate = () => {
 		let i,
 			resultList = [];
 		for (i in emails) {
-			let data = { email: emails[i], real: disposable.validate(emails[i]) };
+			// let data = { email: emails[i], real: disposable.validate(emails[i]) };
+			let data = { email: emails[i], real: true };
 			console.log(data);
 
 			resultList.push(data);
