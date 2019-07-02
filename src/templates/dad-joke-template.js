@@ -12,6 +12,7 @@ const DadJokeStyle = styled.main`
 	}
 	a {
 		display: block;
+		width: fit-content;
 	}
 `;
 const PageTwoTemplate = () => {
