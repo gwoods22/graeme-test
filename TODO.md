@@ -7,6 +7,8 @@
 - Rework form to be nicer
 - Clean out packages
 - Mess with image loading
+- Dad Joke API
+- Functions and other API's
 
 ## Goals
 
