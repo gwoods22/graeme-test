@@ -1,8 +1,9 @@
 module.exports = {
 	siteMetadata: {
-		title: `Gatsby Default Starter`,
-		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-		author: `@gatsbyjs`,
+		title: `Graeme Test`,
+		description: `Graeme's Testing Site`,
+		image: '/media/random3.jpg',
+		siteUrl: 'https://graeme-test.netlify.com/',
 	},
 	plugins: [
 		`gatsby-transformer-sharp`,
@@ -37,10 +38,9 @@ module.exports = {
 				name: `gatsby-starter-default`,
 				short_name: `starter`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
+				background_color: `#FFFFFF`,
+				theme_color: `#32DE8A`,
 				display: `minimal-ui`,
-				icon: `static/media/gatsby-icon.png`, // This path is relative to the root of the site.
 			},
 		},
 		{
