@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const DadJokeStyle = styled.main`
 	h2 {
-		padding: 70px 50px;
+		padding: 1rem 0 2rem;
 		font-size: 4rem;
-		color: ${(p) => p.theme.color.lightGreen};
+	}
+	form {
+		width: 300px;
+		input {
+			margin-bottom: 1rem;
+		}
 	}
 `;
 const PageTwoTemplate = () => {
+	const [name, setName] = useState('NoName');
 	return (
 		<DadJokeStyle>
 			<h2>
@@ -16,10 +22,13 @@ const PageTwoTemplate = () => {
 				Hot and Fresh!
 			</h2>
 			{/* Docs: https://www.netlify.com/docs/functions/ */}
-			<a href="/.netlify/functions/hello">Hello!</a>
-			<div className="img-container">
-				<img src="https://picsum.photos/500/280" alt="placeholder" />
-			</div>
+			<form className="form" action={`/.netlify/functions/hello?name=${name}`}>
+				<label className="label">
+					Enter name:
+					<input className="input" onChange={(e) => setName(e.target.value)} />
+					<button className="button is-primary">Submit</button>
+				</label>
+			</form>
 		</DadJokeStyle>
 	);
 };
