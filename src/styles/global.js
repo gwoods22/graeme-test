@@ -12,9 +12,14 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		font-size: 16px;
 		font-family: ${(p) => p.theme.font};
+		color: ${(p) => p.theme.color.dark};
 		padding: 2rem;
 		span.bold {
 			font-weight: 700;
+		}
+
+		h1, h2, h3 {
+			color: ${(p) => p.theme.color.lightGreen};
 		}
 	}
 `;

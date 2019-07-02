@@ -9,7 +9,6 @@ const HomePageTemplateStyle = styled.main`
 		font-size: 4rem;
 		font-weight: 700;
 		padding: 50px 0 10px;
-		color: ${(p) => p.theme.color.lightGreen};
 	}
 `;
 

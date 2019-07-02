@@ -9,6 +9,7 @@ const StyledHeader = styled.div`
 	li a {
 		padding: 5px 15px 5px 0;
 		color: ${(p) => p.theme.color.lightGreen};
+		transition: 0.5s;
 		&:hover {
 			color: ${(p) => p.theme.color.darkGreen};
 		}
