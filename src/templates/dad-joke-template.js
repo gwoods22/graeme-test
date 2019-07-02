@@ -6,11 +6,12 @@ const DadJokeStyle = styled.main`
 		padding: 1rem 0 2rem;
 		font-size: 4rem;
 	}
-	form {
-		width: 300px;
-		input {
-			margin-bottom: 1rem;
-		}
+	input {
+		width: 200px;
+		margin-bottom: 1rem;
+	}
+	button {
+		display: block;
 	}
 `;
 const PageTwoTemplate = () => {
@@ -22,15 +23,15 @@ const PageTwoTemplate = () => {
 				Hot and Fresh!
 			</h2>
 			{/* Docs: https://www.netlify.com/docs/functions/ */}
-			<form className="form" action="/.netlify/functions/hello">
-				<label className="label">
-					Enter name:
-					<input className="input" onChange={(e) => setName(e.target.value)} />
-					<button type="submit" className="button is-primary">
-						Submit
-					</button>
-				</label>
-			</form>
+
+			<p>Enter name:</p>
+			<input className="input" onChange={(e) => setName(e.target.value)} />
+			<button
+				href={`/.netlify/functions/hello?name=${name}`}
+				className="button is-primary"
+			>
+				Submit
+			</button>
 		</DadJokeStyle>
 	);
 };
