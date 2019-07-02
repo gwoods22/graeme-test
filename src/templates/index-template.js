@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import Layout from '../components/layout';
-import Header from '../components/header';
 import Block from '../components/block';
 
 const HomePageTemplateStyle = styled.main`
@@ -27,27 +24,24 @@ const DetailsStyle = styled.div`
 const HomePageTemplate = ({ pageContext, showDetail }) => {
 	const { title, heading, rows } = pageContext;
 	return (
-		<Layout>
-			<Header />
-			<HomePageTemplateStyle>
-				<h1>{title}</h1>
-				<DetailsStyle showDetail={showDetail}>
-					<h2>{heading}</h2>
-					<h3>
-						This is a <span className="bold">subheading</span>
-					</h3>
-				</DetailsStyle>
-				{rows.map((item, index) => (
-					<Block
-						pLeft={index % 2 === 0 ? true : false}
-						row={{
-							img: item.img,
-							text: item.text,
-						}}
-					/>
-				))}
-			</HomePageTemplateStyle>
-		</Layout>
+		<HomePageTemplateStyle>
+			<h1>{title}</h1>
+			<DetailsStyle showDetail={showDetail}>
+				<h2>{heading}</h2>
+				<h3>
+					This is a <span className="bold">subheading</span>
+				</h3>
+			</DetailsStyle>
+			{rows.map((item, index) => (
+				<Block
+					pLeft={index % 2 === 0 ? true : false}
+					row={{
+						img: item.img,
+						text: item.text,
+					}}
+				/>
+			))}
+		</HomePageTemplateStyle>
 	);
 };
 

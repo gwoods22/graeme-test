@@ -1,5 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import SEO from '../components/seo';
+import Layout from '../components/layout';
 import HomePageTemplate from '../templates/index-template';
 
 export const IndexPageQuery = graphql`
@@ -22,10 +24,13 @@ export const IndexPageQuery = graphql`
 const IndexPage = ({ data }) => {
 	const { allPagesJson } = data;
 	return (
-		<HomePageTemplate
-			pageContext={allPagesJson.edges[0].node}
-			showDetail={true}
-		/>
+		<Layout>
+			<SEO title="Home" />
+			<HomePageTemplate
+				pageContext={allPagesJson.edges[0].node}
+				showDetail={true}
+			/>
+		</Layout>
 	);
 };
 
