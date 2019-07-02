@@ -22,7 +22,7 @@ const PageTwoTemplate = () => {
 				Hot and Fresh!
 			</h2>
 			{/* Docs: https://www.netlify.com/docs/functions/ */}
-			<form className="form" action={`/.netlify/functions/hello?name=${name}`}>
+			<form className="form" action={`/.netlify/functions/hello`}>
 				<label className="label">
 					Enter name:
 					<input className="input" onChange={(e) => setName(e.target.value)} />
