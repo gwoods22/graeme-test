@@ -1,13 +1,14 @@
 module.exports = {
 	siteMetadata: {
 		title: `Graeme Test`,
-		description: `Graeme's Testing Site`,
+		description: `Graeme's Magical Testing Site`,
 		image: '/media/random3.jpg',
 		siteUrl: 'https://graeme-test.netlify.com/',
 	},
 	plugins: [
 		`gatsby-transformer-sharp`,
 		`gatsby-transformer-json`,
+		`gatsby-plugin-sass`,
 		`gatsby-plugin-styled-components`,
 		`gatsby-plugin-react-helmet`,
 		{
