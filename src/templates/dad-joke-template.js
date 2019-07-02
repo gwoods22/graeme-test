@@ -22,11 +22,13 @@ const PageTwoTemplate = () => {
 				Hot and Fresh!
 			</h2>
 			{/* Docs: https://www.netlify.com/docs/functions/ */}
-			<form className="form" action={`/.netlify/functions/hello`}>
+			<form className="form" action="/.netlify/functions/hello">
 				<label className="label">
 					Enter name:
 					<input className="input" onChange={(e) => setName(e.target.value)} />
-					<button className="button is-primary">Submit</button>
+					<button type="submit" className="button is-primary">
+						Submit
+					</button>
 				</label>
 			</form>
 		</DadJokeStyle>
