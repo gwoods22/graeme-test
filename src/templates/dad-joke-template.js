@@ -10,7 +10,7 @@ const DadJokeStyle = styled.main`
 		width: 200px;
 		margin-bottom: 1rem;
 	}
-	button {
+	a {
 		display: block;
 	}
 `;
@@ -26,12 +26,12 @@ const PageTwoTemplate = () => {
 
 			<p>Enter name:</p>
 			<input className="input" onChange={(e) => setName(e.target.value)} />
-			<button
+			<a
 				href={`/.netlify/functions/hello?name=${name}`}
 				className="button is-primary"
 			>
 				Submit
-			</button>
+			</a>
 		</DadJokeStyle>
 	);
 };
