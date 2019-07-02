@@ -1,8 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
+import bulma from './bulmaSetup.scss';
+import reset from './reset.css';
+
 const GlobalStyle = createGlobalStyle`
-	@import url('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css');
 	@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap')
+
+	${reset}
+	${bulma}
 
 	body {
 		font-size: 16px;

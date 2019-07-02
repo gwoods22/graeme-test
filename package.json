@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^2.3.34",
+    "gatsby-cli": "^2.7.7",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-netlify-cms": "^3.0.18",
@@ -20,6 +21,7 @@
     "immutable": "^3.8.2",
     "netlify-cms": "^2.9.1",
     "node-fetch": "^2.6.0",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -32,6 +34,7 @@
     "typescript": "^3.4.5"
   },
   "devDependencies": {
+    "bulma": "^0.7.5",
     "prettier": "^1.17.0"
   },
   "keywords": [
