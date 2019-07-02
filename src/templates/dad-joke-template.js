@@ -8,7 +8,7 @@ const DadJokeStyle = styled.main`
 	h2 {
 		padding: 70px 50px;
 		font-size: 4rem;
-		color: ${(p) => p.theme.colors.primary};
+		color: ${(p) => p.theme.color.lightGreen};
 	}
 `;
 const PageTwoTemplate = () => {

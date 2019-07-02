@@ -8,9 +8,9 @@ const StyledHeader = styled.div`
 	}
 	li a {
 		padding: 5px 15px 5px 0;
-		color: ${(p) => p.theme.colors.primary};
+		color: ${(p) => p.theme.color.lightGreen};
 		&:hover {
-			color: ${(p) => p.theme.colors.secondary};
+			color: ${(p) => p.theme.color.darkGreen};
 		}
 	}
 `;

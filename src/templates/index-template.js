@@ -12,13 +12,13 @@ const HomePageTemplateStyle = styled.main`
 		font-size: 4rem;
 		font-weight: 700;
 		padding: 50px 0 10px;
-		color: ${(p) => p.theme.colors.primary};
+		color: ${(p) => p.theme.color.lightGreen};
 	}
 `;
 
 const DetailsStyle = styled.div`
 	h2 {
-		color: ${(p) => p.theme.colors.secondary};
+		color: ${(p) => p.theme.color.darkGreen};
 		display: ${(p) => (p.showDetail ? 'block' : 'none')};
 	}
 	margin-bottom: 20px;
