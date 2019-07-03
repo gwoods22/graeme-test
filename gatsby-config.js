@@ -9,6 +9,7 @@ module.exports = {
 		`gatsby-transformer-sharp`,
 		`gatsby-transformer-json`,
 		`gatsby-plugin-sass`,
+		'gatsby-plugin-polyfill-io',
 		`gatsby-plugin-styled-components`,
 		`gatsby-plugin-react-helmet`,
 		{
