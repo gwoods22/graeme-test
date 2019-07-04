@@ -58,22 +58,27 @@ const FormTemplate = () => {
 						required
 					/>
 
-					<p>Rating Label:</p>
+					<p>Rating:</p>
 					<fieldset id="rating">
 						<label className="radio" htmlFor="1">
-							1<input type="radio" value="1" id="rating-1" name="rating" />
+							1
+							<input type="radio" value="1" id="rating-1" name="rating label" />
 						</label>
 						<label className="radio" htmlFor="2">
-							2<input type="radio" value="2" id="rating-2" name="rating" />
+							2
+							<input type="radio" value="2" id="rating-2" name="rating label" />
 						</label>
 						<label className="radio" htmlFor="3">
-							3<input type="radio" value="3" id="rating-3" name="rating" />
+							3
+							<input type="radio" value="3" id="rating-3" name="rating label" />
 						</label>
 						<label className="radio" htmlFor="4">
-							4<input type="radio" value="4" id="rating-4" name="rating" />
+							4
+							<input type="radio" value="4" id="rating-4" name="rating label" />
 						</label>
 						<label className="radio" htmlFor="5">
-							5<input type="radio" value="5" id="rating-5" name="rating" />
+							5
+							<input type="radio" value="5" id="rating-5" name="rating label" />
 						</label>
 					</fieldset>
 					<label htmlFor="color">Colour:</label>
