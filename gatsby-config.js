@@ -2,8 +2,9 @@ module.exports = {
 	siteMetadata: {
 		title: `Graeme Test`,
 		description: `Graeme's Magical Testing Site`,
-		image: '/media/random3.jpg',
-		siteUrl: 'https://graeme-test.netlify.com/',
+		image: '/social-image.jpg',
+		twitterImage: '/android-chrome-512x512.png',
+		siteUrl: 'https://graeme-test.netlify.com',
 	},
 	plugins: [
 		`gatsby-transformer-sharp`,

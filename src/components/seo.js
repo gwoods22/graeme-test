@@ -19,6 +19,7 @@ function SEO({ description, lang, keywords, title }) {
 						title
 						description
 						image
+						twitterImage
 						siteUrl
 					}
 				}
@@ -29,6 +30,7 @@ function SEO({ description, lang, keywords, title }) {
 	const metaDescription = description || site.siteMetadata.description;
 	const url = site.siteMetadata.siteUrl;
 	const image = `${url}${site.siteMetadata.image}`;
+	const twitterImage = `${url}${site.siteMetadata.twitterImage}`;
 
 	return (
 		<Helmet
@@ -45,7 +47,7 @@ function SEO({ description, lang, keywords, title }) {
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:title" content={title} />
 			<meta name="twitter:description" content={metaDescription} />
-			<meta name="twitter:image:src" content={image} />
+			<meta name="twitter:image:src" content={twitterImage} />
 			<meta property="og:locale" content="'en_US'" />
 			<meta property="og:site_name" content={title} />
 			<meta property="og:image" content={image} />
