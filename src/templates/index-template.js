@@ -27,9 +27,6 @@ const HomePageTemplate = ({ pageContext, showDetail }) => {
 			<h1>{title}</h1>
 			<DetailsStyle showDetail={showDetail}>
 				<h2>{heading}</h2>
-				<h3>
-					This is a <span className="bold">subheading</span>
-				</h3>
 			</DetailsStyle>
 			{rows.map((item, index) => (
 				<Block
