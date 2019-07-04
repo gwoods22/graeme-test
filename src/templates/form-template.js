@@ -26,6 +26,10 @@ const StyledForm = styled.main`
 		#color {
 			width: 100%;
 		}
+		.name-label,
+		.rating-label {
+			display: block;
+		}
 	}
 `;
 
@@ -42,8 +46,10 @@ const FormTemplate = () => {
 				<div className="formWrap">
 					<input type="hidden" name="form-name" value="Test Form" />
 					<h2>FORM</h2>
-					<p>Name:</p>
 					<input type="hidden" name="bot-field" />
+					<label className="name-label" htmlFor="name">
+						Name:
+					</label>
 					<input
 						type="text"
 						id="name"
@@ -51,9 +57,10 @@ const FormTemplate = () => {
 						placeholder="John Smith"
 						required
 					/>
-					<fieldset>
-						<p>Rating:</p>
-						<label className="radio is-hidden" htmlFor="rating" />
+					<fieldset id="rating">
+						<label className="rating-label" htmlFor="rating">
+							Rating:
+						</label>
 						<label className="radio" htmlFor="1">
 							1<input type="radio" value="1" id="rating-1" name="rating" />
 						</label>
@@ -70,7 +77,7 @@ const FormTemplate = () => {
 							5<input type="radio" value="5" id="rating-5" name="rating" />
 						</label>
 					</fieldset>
-					<p>Colour:</p>
+					<label htmlFor="color">Colour:</label>
 					<input type="color" id="color" placeholder="#ff0000" name="color" />
 					<br />
 					<button type="submit" className="button">
