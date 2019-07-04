@@ -5,6 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Design Files
+*.ai
+*.psd
+
 # Runtime data
 pids
 *.pid
