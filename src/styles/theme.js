@@ -1,5 +1,8 @@
 export default {
-	font: `'Nunito', sans-serif`,
+	font: {
+		title: `'Nunito', sans-serif`,
+		body: `'Muli', sans-serif`,
+	},
 	color: {
 		darkGreen: '#17B890',
 		lightGreen: '#32DE8A',
