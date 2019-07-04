@@ -61,7 +61,7 @@ const FormTemplate = () => {
 					<label className="rating-label" htmlFor="rating">
 						Rating Label:
 					</label>
-					<fieldset id="rating">
+					<fieldset id="rating" name="rating">
 						<label className="radio" htmlFor="1">
 							1<input type="radio" value="1" id="rating-1" name="rating" />
 						</label>
