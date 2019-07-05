@@ -5,6 +5,7 @@ const StyledValidate = styled.div`
 	.validate {
 		padding: 4rem 6rem;
 	}
+
 	form {
 		display: flex;
 		flex-direction: column;
