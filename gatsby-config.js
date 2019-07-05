@@ -28,13 +28,6 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `emails`,
-				path: `${__dirname}/src/data/emails`,
-			},
-		},
-		{
 			resolve: `gatsby-plugin-sharp`,
 			options: {
 				useMozJpeg: false,
