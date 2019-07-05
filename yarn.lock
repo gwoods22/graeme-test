@@ -3650,14 +3650,6 @@ csstype@^2.2.0, csstype@^2.5.2, csstype@^2.5.7:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.4.tgz#d585a6062096e324e7187f80e04f92bd0f00e37f"
   integrity sha512-lAJUJP3M6HxFXbqtGRc0iZrdyeN+WzOWeY0q/VnFzI+kqVrYIzC7bWlKqCW7oCIdzoPkvfp82EVvrTlQ8zsWQg==
 
-csvtojson@^1.1:
-  version "1.1.12"
-  resolved "https://registry.yarnpkg.com/csvtojson/-/csvtojson-1.1.12.tgz#3872eef9588080f74c222ffe53cfdd416f9bb7d5"
-  integrity sha512-gJg1II2uXh8H6XP7L1YzX/6H8rrUbSTiEg4SaI6/pHOcnZovwAR3Rmm9TizSsGQBBXl1pb/JJPlaImV2YIuMrg==
-  dependencies:
-    lodash "^4.17.3"
-    strip-bom "^2.0.0"
-
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -5531,15 +5523,6 @@ gatsby-telemetry@^1.1.2:
     stack-trace "^0.0.10"
     stack-utils "1.0.2"
     uuid "3.3.2"
-
-gatsby-transformer-csv@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-csv/-/gatsby-transformer-csv-2.1.0.tgz#73086a6334696f466656691219b513dee0aa643e"
-  integrity sha512-3wj9elcaPa1XxjK4JAAapyR3U9c+JDMri0YNKA71RC8iI1Vw1peh3l3uFLrb2VTOwjz2YIV3jRBbPHahumpmgA==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    bluebird "^3.5.0"
-    csvtojson "^1.1"
 
 gatsby-transformer-json@^2.1.11:
   version "2.1.11"

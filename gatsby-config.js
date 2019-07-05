@@ -9,7 +9,6 @@ module.exports = {
 	plugins: [
 		`gatsby-transformer-sharp`,
 		`gatsby-transformer-json`,
-		`gatsby-transformer-csv`,
 		`gatsby-plugin-sass`,
 		'gatsby-plugin-polyfill-io',
 		`gatsby-plugin-styled-components`,
