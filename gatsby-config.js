@@ -9,6 +9,7 @@ module.exports = {
 	plugins: [
 		`gatsby-transformer-sharp`,
 		`gatsby-transformer-json`,
+		`gatsby-transformer-csv`,
 		`gatsby-plugin-sass`,
 		'gatsby-plugin-polyfill-io',
 		`gatsby-plugin-styled-components`,
@@ -28,22 +29,18 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `emails`,
+				path: `${__dirname}/src/data/emails`,
+			},
+		},
+		{
 			resolve: `gatsby-plugin-sharp`,
 			options: {
 				useMozJpeg: false,
 				stripMetadata: true,
 				defaultQuality: 75,
-			},
-		},
-		{
-			resolve: `gatsby-plugin-manifest`,
-			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`,
-				start_url: `/`,
-				background_color: `#FFFFFF`,
-				theme_color: `#32DE8A`,
-				display: `minimal-ui`,
 			},
 		},
 		{
