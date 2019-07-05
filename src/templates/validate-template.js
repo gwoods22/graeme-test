@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { domain } from '../util/email';
 
 const StyledValidate = styled.div`
 	.validate {
@@ -31,11 +32,13 @@ const StyledValidate = styled.div`
 	}
 `;
 
-const ValidateTemplate = ({ badEmails }) => {
+const ValidateTemplate = () => {
 	const [input, setInput] = useState('');
 	const [results, setResults] = useState([]);
 	const [stats, setStats] = useState([]);
 	const [showResults, setShowResults] = useState(false);
+
+	const badEmails = domain.split(',');
 
 	const isReal = (email) => {
 		const searchDomain = email.split('@')[1].trim();
@@ -43,7 +46,7 @@ const ValidateTemplate = ({ badEmails }) => {
 		let i,
 			realVal = true;
 		for (i in badEmails) {
-			if (badEmails[i].domain === searchDomain) realVal = false;
+			if (badEmails[i] === searchDomain) realVal = false;
 		}
 		return realVal;
 	};
