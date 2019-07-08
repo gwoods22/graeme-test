@@ -25,15 +25,6 @@ const PageTwoTemplate = () => {
 				Hot and Fresh!
 			</h2>
 			{/* Docs: https://www.netlify.com/docs/functions/ */}
-
-			<p>Enter name:</p>
-			<input className="input" onChange={(e) => setName(e.target.value)} />
-			<a
-				href={`/.netlify/functions/hello?name=${name}`}
-				className="button is-primary"
-			>
-				Submit
-			</a>
 		</DadJokeStyle>
 	);
 };
