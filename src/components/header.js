@@ -29,9 +29,9 @@ const Header = () => {
 				<li>
 					<Link to="/form/">Form</Link>
 				</li>
-				<li>
+				{/* <li>
 					<Link to="/validate/">Validate</Link>
-				</li>
+				</li> */}
 			</ul>
 		</StyledHeader>
 	);
