@@ -5,6 +5,7 @@ const DadJokeStyle = styled.main`
 	h2 {
 		padding: 1rem 0 2rem;
 		font-size: 4rem;
+		line-height: 4rem;
 	}
 	input {
 		width: 200px;
