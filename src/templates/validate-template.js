@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { domain } from '../util/email';
+// Real List
+// import { domain } from '../util/email';
+import { domainShort } from '../util/email';
 
 const StyledValidate = styled.div`
 	.validate {
