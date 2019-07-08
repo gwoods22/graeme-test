@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { domain } from '../util/email';
+// import { domain } from '../util/email';
 
 const StyledValidate = styled.div`
 	.validate {
@@ -38,17 +38,20 @@ const ValidateTemplate = () => {
 	const [stats, setStats] = useState([]);
 	const [showResults, setShowResults] = useState(false);
 
-	const badEmails = domain.split(',');
+	// const badEmails = domain.split(',');
 
 	const isReal = (email) => {
 		const searchDomain = email.split('@')[1].trim();
-
-		let i,
-			realVal = true;
-		for (i in badEmails) {
-			if (badEmails[i] === searchDomain) realVal = false;
-		}
-		return realVal;
+		if (searchDomain === 'guerrillamail.biz') return false;
+		if (searchDomain === 'grr.la') return false;
+		if (searchDomain === 'pokemail.net') return false;
+		return true;
+		// let i,
+		// 	realVal = true;
+		// for (i in badEmails) {
+		// 	if (badEmails[i] === searchDomain) realVal = false;
+		// }
+		// return realVal;
 	};
 
 	const handleSubmit = (event) => {
