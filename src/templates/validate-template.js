@@ -34,66 +34,67 @@ const StyledValidate = styled.div`
 
 const ValidateTemplate = () => {
 	const [input, setInput] = useState('');
-	const [results, setResults] = useState([]);
-	const [stats, setStats] = useState([]);
-	const [showResults, setShowResults] = useState(false);
+	// const [results, setResults] = useState([]);
+	// const [stats, setStats] = useState([]);
+	// const [showResults, setShowResults] = useState(false);
 
-	// const badEmails = domain.split(',');
+	// // const badEmails = domain.split(',');
 
-	const isReal = (email) => {
-		const searchDomain = email.split('@')[1].trim();
-		if (searchDomain === 'guerrillamail.biz') return false;
-		if (searchDomain === 'grr.la') return false;
-		if (searchDomain === 'pokemail.net') return false;
-		return true;
-		// let i,
-		// 	realVal = true;
-		// for (i in badEmails) {
-		// 	if (badEmails[i] === searchDomain) realVal = false;
-		// }
-		// return realVal;
-	};
+	// const isReal = (email) => {
+	// 	const searchDomain = email.split('@')[1].trim();
+	// 	if (searchDomain === 'guerrillamail.biz') return false;
+	// 	if (searchDomain === 'grr.la') return false;
+	// 	if (searchDomain === 'pokemail.net') return false;
+	// 	return true;
+	// 	// let i,
+	// 	// 	realVal = true;
+	// 	// for (i in badEmails) {
+	// 	// 	if (badEmails[i] === searchDomain) realVal = false;
+	// 	// }
+	// 	// return realVal;
+	// };
 
-	const handleSubmit = (event) => {
-		let emails = input.split(',');
-		let i,
-			fakes = 0,
-			resultList = [];
-		for (i in emails) {
-			if (emails[i] !== ' ' && emails[i] !== '') {
-				let data = { email: emails[i], real: isReal(emails[i]) };
-				resultList.push(data);
-				if (!isReal(emails[i])) fakes++;
-			}
-		}
-		event.preventDefault();
-		setShowResults(true);
-		setResults(resultList);
+	// const handleSubmit = (event) => {
+	// 	let emails = input.split(',');
+	// 	let i,
+	// 		fakes = 0,
+	// 		resultList = [];
+	// 	for (i in emails) {
+	// 		if (emails[i] !== ' ' && emails[i] !== '') {
+	// 			let data = { email: emails[i], real: isReal(emails[i]) };
+	// 			resultList.push(data);
+	// 			if (!isReal(emails[i])) fakes++;
+	// 		}
+	// 	}
+	// 	event.preventDefault();
+	// 	setShowResults(true);
+	// 	setResults(resultList);
 
-		// Stats data
-		const len = resultList.length;
+	// 	// Stats data
+	// 	const len = resultList.length;
 
-		setStats([
-			{ text: 'Total emails', value: len, className: '' },
-			{
-				text: 'Fake Email %',
-				value: `${((fakes / len) * 100).toFixed(1)}%`,
-			},
-			{ text: 'Fake Emails', value: fakes, className: 'has-text-danger' },
-			{
-				text: 'Real Emails',
-				value: len - fakes,
-				className: 'has-text-success',
-			},
-		]);
-	};
+	// 	setStats([
+	// 		{ text: 'Total emails', value: len, className: '' },
+	// 		{
+	// 			text: 'Fake Email %',
+	// 			value: `${((fakes / len) * 100).toFixed(1)}%`,
+	// 		},
+	// 		{ text: 'Fake Emails', value: fakes, className: 'has-text-danger' },
+	// 		{
+	// 			text: 'Real Emails',
+	// 			value: len - fakes,
+	// 			className: 'has-text-success',
+	// 		},
+	// 	]);
+	// };
 
 	return (
 		<>
 			<StyledValidate>
 				<div className="validate">
 					<div className="container">
-						<form onSubmit={handleSubmit}>
+						{/* <form onSubmit={handleSubmit}> */}
+						<form>
 							<label className="has-text-weight-bold" htmlFor="emails">
 								Enter emails here:
 							</label>
@@ -104,12 +105,12 @@ const ValidateTemplate = () => {
 								type="text"
 								onChange={(e) => setInput(e.target.value)}
 							/>
-
+							{input}
 							<div className="submit-container">
 								<input className="button" type="submit" value="Submit" />
 							</div>
 						</form>
-						{showResults && (
+						{/* {showResults && (
 							<div className="columns">
 								<div className="column is-half">
 									<div className="results">
@@ -150,7 +151,7 @@ const ValidateTemplate = () => {
 									</table>
 								</div>
 							</div>
-						)}
+						)} */}
 					</div>
 				</div>
 			</StyledValidate>
