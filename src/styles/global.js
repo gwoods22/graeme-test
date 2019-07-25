@@ -19,21 +19,9 @@ const GlobalStyle = createGlobalStyle`
 			font-weight: 700;
 		}
 
-		h1{
+		h1, h2, h3 {
 			color: ${(p) => p.theme.color.lightGreen};
 			font-family: ${(p) => p.theme.font.title};
-			font-size: 3rem;
-			line-height: 3.5rem;
-		} h2{
-			color: ${(p) => p.theme.color.lightGreen};
-			font-family: ${(p) => p.theme.font.title};
-			font-size: 2rem;
-			line-height: 2.5rem;
-		} h3 {
-			color: ${(p) => p.theme.color.lightGreen};
-			font-family: ${(p) => p.theme.font.title};
-			font-size: 1.3rem;
-			line-height: 1.6rem;
 		}
 	}
 `;

@@ -35,7 +35,6 @@ const HomePageTemplate = ({ pageContext, showDetail }) => {
 						img: item.img,
 						text: item.text,
 					}}
-					key={index}
 				/>
 			))}
 		</HomePageTemplateStyle>

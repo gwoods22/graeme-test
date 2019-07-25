@@ -36,6 +36,17 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `gatsby-starter-default`,
+				short_name: `starter`,
+				start_url: `/`,
+				background_color: `#FFFFFF`,
+				theme_color: `#32DE8A`,
+				display: `minimal-ui`,
+			},
+		},
+		{
 			resolve: 'gatsby-plugin-netlify-cms',
 			options: {
 				modulePath: `${__dirname}/src/cms/cms.js`,
