@@ -11,30 +11,56 @@ const DadJokeStyle = styled.main`
 		width: 200px;
 		margin-bottom: 1rem;
 	}
-	a {
-		display: block;
+	form {
+		margin-top: 0.5rem;
+		button {
+			margin-left: 0.5rem;
+		}
+	}
+	.joke-container {
+		margin-top: 2rem;
+		padding: 2rem;
 		width: fit-content;
+		text-align: center;
+		font-size: 1.5rem;
 	}
 `;
-const PageTwoTemplate = () => {
+export default () => {
 	const [name, setName] = useState('NoName');
+	const [joke, setJoke] = useState('');
+
+	const submitForm = (e) => {
+		e.preventDefault();
+		setJoke(`${name} is dumb.`);
+		// /.netlify/functions/hello?name=${name}
+	};
+
 	return (
 		<DadJokeStyle>
 			<h2>
 				Get Your Dad Jokes! <br />
 				Hot and Fresh!
 			</h2>
-			{/* Docs: https://www.netlify.com/docs/functions/ */}
+			{/*
+				Docs: https://www.netlify.com/docs/functions/
+				https://github.com/netlify/create-react-app-lambda/blob/master/src/App.js
+			*/}
 			<p>Enter name:</p>
-			<input className="input" onChange={(e) => setName(e.target.value)} />
-			<a
-				href={`/.netlify/functions/hello?name=${name}`}
-				className="button is-primary"
-			>
-				Submit
-			</a>
+			<form onSubmit={submitForm}>
+				<input
+					className="input"
+					onFocus={() => setJoke('')}
+					onChange={(e) => setName(e.target.value)}
+				/>
+				<button type="submit" className="button is-primary">
+					Submit
+				</button>
+			</form>
+			{joke !== '' && (
+				<div className="joke-container card">
+					<p>{joke}</p>
+				</div>
+			)}
 		</DadJokeStyle>
 	);
 };
-
-export default PageTwoTemplate;
