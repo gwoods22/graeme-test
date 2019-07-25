@@ -1,0 +1,6 @@
+[build]
+ # REFERENCE
+ # https://www.netlify.com/docs/netlify-toml-reference/
+ 
+ # Directory with the serverless Lambda functions to deploy to AWS.
+  functions = "project/functions/"
